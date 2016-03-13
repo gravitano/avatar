@@ -87,6 +87,13 @@ class Avatar
         });
     }
 
+    public function response()
+    {
+        $this->buildAvatar();
+
+        return $this->image->response();
+    }
+
     public function save($path, $quality = 90)
     {
         $this->buildAvatar();
